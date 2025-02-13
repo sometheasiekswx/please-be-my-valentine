@@ -34,21 +34,21 @@ export default function Page() {
 
     return (<>
         {yesPressed ? (<div className={"relative"}>
-            <img className={"fixed bottom-10 left-0 m-10 h-[180px] -rotate-12 rounded-md -z-10"} src={lean}/>
-            <img className={"fixed top-0 right-0 m-10 h-[140px] -rotate-6 rounded-md -z-10"} src={proposeGif}/>
-            <img className={"fixed top-0 left-0 m-10 h-[200px] rotate-12 rounded-md -z-10"} src={meSelfie}/>
-            <img className={"fixed bottom-10 right-0 m-10 h-[140px] rotate-6 rounded-md -z-10"} src={lap}/>
+            <img className={"fixed bottom-10 -left-2 h-48 -rotate-12 rounded-md -z-10"} src={proposeGif}/>
+            <img className={"fixed -top-5 -right-2 h-44 -rotate-6 rounded-md -z-10"} src={lean}/>
+            <img className={"fixed top-0 -left-5 h-36 rotate-12 rounded-md -z-10"} src={lap}/>
+            <img className={"fixed bottom-5 -right-2 h-52 rotate-6 rounded-md -z-10"} src={meSelfie}/>
         </div>) : (<div className={"relative"}>
-            <img className={"fixed bottom-16 left-0 m-10 h-[150px] rotate-12 rounded-md -z-10"} src={flowers}/>
-            <img className={"fixed top-0 left-0 m-10 h-[175px] rotate-6 rounded-md -z-10"} src={hug}/>
-            <img className={"fixed top-0 right-0 m-10 h-[125px] -rotate-12 rounded-md -z-10"} src={realism}/>
-            <img className={"fixed bottom-10 right-0 m-10 h-[200px] -rotate-6 rounded-md -z-10"} src={kiss}/>
+            <img className={"fixed bottom-10 left-0 h-40 rotate-12 rounded-md -z-10"} src={flowers}/>
+            <img className={"fixed -top-5 left-0 h-40 rotate-6 rounded-md -z-10"} src={hug}/>
+            <img className={"fixed -top-5 -right-2 h-36 -rotate-12 rounded-md -z-10"} src={realism}/>
+            <img className={"fixed bottom-5 right-0 h-52 -rotate-6 rounded-md -z-10"} src={kiss}/>
         </div>)}
 
         <div className="flex h-screen flex-col items-center justify-center z-10">
             {yesPressed ? (<>
                 <img
-                    className="-mt-40 h-[300px] rounded-lg"
+                    className="-mt-40 -mb-5 h-44 rounded-lg"
                     src={jumpingCatGif}
                 />
                 <h1 className="my-4 text-2xl font-medium">Your Love is Everything to Me 🥹💗</h1>
@@ -60,7 +60,7 @@ export default function Page() {
                 </button>
             </>) : (<>
                 <img
-                    className="-mt-20 h-[150px] rounded-lg"
+                    className="-mt-20 h-32 rounded-md"
                     src={beggingCatGif}
                 />
                 <h1 className="my-4 text-2xl font-medium">Please be my Valentine? 🥺🙏</h1>
@@ -80,7 +80,7 @@ export default function Page() {
                     </button>
                 </div>
                 {noCount > 2 && (<img
-                    className="m-5 h-[200px] rounded-lg"
+                    className="-mb-5 m-5 h-32 rounded-md"
                     src={hamsterPleadingGif}
                 />)}
             </>)}
@@ -92,7 +92,7 @@ export default function Page() {
                         For Tara 💕
                     </p>
                     <p className={"text-right col-span-1"}>
-                        Yours forever, Somethea 🙆‍♂️
+                        Yours forever, Sam 🙆‍♂️
                     </p>
                 </span>
         </footer>

@@ -13,6 +13,7 @@ import hamsterPleadingGif from './assets/hamster-pleading.gif'
 import proposeGif from './assets/propose.gif'
 import lean from './assets/lean.jpg'
 import yipeeSound from './assets/yipee.mp3'
+import photoboothGif from './assets/photobooth.gif'
 
 export default function Page() {
     const [noCount, setNoCount] = useState(0)
@@ -41,12 +42,12 @@ export default function Page() {
     return (<>
         {yesPressed ? (<div className={"relative"}>
             <img
-                className={"fixed bottom-10 sm:bottom-12 sm:left-0 -left-2 h-48 sm:h-64 lg:h-80 -rotate-12 rounded-md -z-10"}
-                src={proposeGif}/>
+                className={"fixed bottom-10 sm:bottom-12 sm:left-0 left-0 h-48 sm:h-64 lg:h-80 -rotate-12 rounded-md -z-10"}
+                src={photoboothGif}/>
             <img
-                className={"fixed -top-5 sm:top-0 lg:h-[26rem] -right-2 sm:right-0 h-44 lg:right-2 sm:h-72 -rotate-6 rounded-md -z-10"}
+                className={"fixed -top-5 sm:top-0 lg:h-96 -right-2 sm:right-0 h-44 lg:right-2 sm:h-72 -rotate-6 rounded-md -z-10"}
                 src={lean}/>
-            <img className={"fixed top-0 -left-5 h-36 sm:h-52 lg:h-80 rotate-12 rounded-md -z-10"} src={lap}/>
+            <img className={"fixed top-0 -left-5 h-36 sm:h-52 lg:h-64 rotate-12 rounded-md -z-10"} src={lap}/>
             <img className={"fixed bottom-5 -right-2 h-52 sm:h-96 lg:h-[26rem] lg:right-2 rotate-6 rounded-md -z-10"}
                  src={meSelfie}/>
         </div>) : (<div className={"relative"}>
@@ -66,25 +67,29 @@ export default function Page() {
         <div className="flex h-screen flex-col items-center justify-center z-10">
             {yesPressed ? (<>
                 <img
-                    className="-mt-40 -mb-5 h-44 rounded-lg"
+                    className="-mt-40 -mb-5 h-44 rounded-md"
                     src={jumpingCatGif}
                 />
-                <h1 className="my-4 text-2xl font-medium">Your Love is Everything to Me 🥹💗</h1>
+                <h1 className="my-4 text-2xl sm:text-3xl font-medium text-white">Your Love is Everything to Me 🥹💗</h1>
                 <button
                     className={`mx-4 rounded bg-black px-4 py-2 text-white hover:bg-gray-800`}
                     onClick={() => reset()}
                 >
                     Click to Replay
                 </button>
+                <img
+                    className="mt-4 h-24 sm:h-44 lg:h-52 rounded-md"
+                    src={proposeGif}
+                />
             </>) : (<>
                 <img
                     className="-mt-20 h-32 sm:h-48 rounded-md"
                     src={beggingCatGif}
                 />
-                <h1 className="my-4 text-2xl font-medium sm:text-3xl">Please be my Valentine? 🥺🙏</h1>
+                <h1 className="my-4 text-2xl font-medium sm:text-3xl text-white">Please be my Valentine? 🥺🙏</h1>
                 <div className="flex items-center">
                     <button
-                        className={`mx-4 rounded bg-green-500 px-4 font-bold py-2 text-white hover:bg-green-700`}
+                        className={`mx-4 rounded bg-green-500 px-4 font-medium py-2 text-white hover:bg-green-700`}
                         style={{fontSize: yesButtonSize}}
                         onClick={() => setYesPressed(true)}
                         onMouseUp={() => {
@@ -107,7 +112,7 @@ export default function Page() {
             </>)}
         </div>
         <footer
-            className="fixed bottom-0 left-0 z-20 w-full p-4 bg-black border-t shadow-sm">
+            className="fixed bottom-0 left-0 z-20 w-full p-2 bg-black shadow-sm">
                 <span className="text-sm text-white grid grid-cols-2">
                     <p className={"text-left col-span-1"}>
                         For Tara 💕

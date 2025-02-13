@@ -78,7 +78,7 @@ export default function Page() {
                     Click to Replay
                 </button>
                 <img
-                    className="mt-4 h-24 sm:h-44 lg:h-52 rounded-md"
+                    className="mt-4 h-28 sm:h-44 lg:h-52 rounded-md"
                     src={proposeGif}
                 />
             </>) : (<>
